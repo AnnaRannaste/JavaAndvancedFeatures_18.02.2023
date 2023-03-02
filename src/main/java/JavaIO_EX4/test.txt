@@ -1,0 +1,4 @@
+What is special about Java?
+One of the most significant advantages of Java is its ability to move easily from one computer system to another. 
+The ability to run the same program on many different systems is crucial to World Wide Web software, 
+and Java succeeds at this by being platform-independent at both the source and binary levels.
