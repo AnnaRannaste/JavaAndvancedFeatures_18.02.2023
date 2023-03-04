@@ -1,18 +1,29 @@
 package OOP_EX7;
 
-import JavaIO_EX4.JavaIOEx4;
-
 public class OOPEx7 {
 
     public static void main(String[] args) {
-        Circle circle = new Circle(14);
-        System.out.println(circle.getArea());
-        System.out.println(circle.getPerimeter());
+        Circle circle = new Circle(10);
+
         System.out.println(circle);
 
-        ResizableInterface resizable = new ResizableCircle(40);
-        resizable.resize(30);
+        System.out.println();
+
+        System.out.println("Calculated area of the circle is: " + circle.getArea());
+        System.out.println("Calculated perimeter of the circle is: " + circle.getPerimeter());
+
+        System.out.println();
+
+        ResizableCircle resizable = new ResizableCircle(10);
+
+        resizable.resize(40);
+
+        float newCircle= circle.radius - resizable.radius;
         System.out.println(resizable);
+        System.out.println("The new resized circle radius is: " + newCircle);
+
+
+
 
 
     }
@@ -23,13 +34,15 @@ class Circle implements GeometricObject {
 
     protected float radius;
 
-    public Circle(float radius) {
+    public Circle(float radius)
+    {
 
         this.radius = radius;
     }
 
     @Override
-    public double getPerimeter() {
+    public double getPerimeter()
+    {
         return 2 * Math.PI * radius;
     }
 
@@ -65,8 +78,8 @@ class ResizableCircle extends Circle implements ResizableInterface {
 
     @Override
     public String toString() {
-        return "Resizable{ " +
-                "radius=" + radius +
+        return "ResizableCircle { " +
+                "radius is reduced by " + radius +
                 '}';
 
     }

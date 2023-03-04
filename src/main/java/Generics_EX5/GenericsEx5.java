@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class GenericsEx5 {
     public static void main(String[] args) {
-        Animal[] animal = {new Cat("Persian", 10), new Dog("German", "beef")};
+        Animal[] animal = {new Cat("Tom", 10), new Dog("Pluto", "beef")};
         AnimalHouse<Animal> animals = new AnimalHouse<>(animal);
         System.out.println(Arrays.toString(animals.getAnimals()));
     }
